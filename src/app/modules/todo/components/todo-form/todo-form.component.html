@@ -1,0 +1,23 @@
+<div class="flex items-center justify-center">
+  <form
+    class="flex items-center justify-center"
+    [formGroup]="todoForm"
+    (ngSubmit)="submit()"
+  >
+    <div>
+      <input
+        type="text"
+        class="rounded-l-lg border-none focus:outline-none focus:ring-0 focus:ring-offset-0 shadow-xl font-semibold text-gray-900 dark:text-gray-50 placeholder-gray-500 bg-gray-200 dark:bg-gray-800"
+        placeholder="Enter Todo"
+        formControlName="text"
+      />
+    </div>
+
+    <button
+      type="submit"
+      class="rounded-r-lg bg-green-400 h-10 font-mono text-3xl font-bold text-gray-50 p-2 flex items-center justify-center shadow-xl"
+    >
+      <p>+</p>
+    </button>
+  </form>
+</div>

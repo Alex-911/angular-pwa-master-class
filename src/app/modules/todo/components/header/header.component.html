@@ -1,0 +1,27 @@
+<div class="flex items-center justify-between p-4 shadow-lg">
+  <div class="flex items-center justify-start space-x-2">
+    <div
+      class="rounded-full bg-gray-200 shadow-lg flex items-center justify-center"
+    >
+      <img
+        [src]="(user | async)?.photoUrl"
+        alt=""
+        class="w-14 h-14 rounded-full"
+      />
+    </div>
+    <div class="flex flex-col items-stretch justify-center">
+      <h1 class="font-bold text-lg text-gray-900 dark:text-gray-50">
+        {{ (user | async)?.name }}
+      </h1>
+      <h2 class="font-semibold text-sm text-gray-900 dark:text-gray-50">
+        {{ (user | async)?.email }}
+      </h2>
+    </div>
+  </div>
+  <Button
+    class="text-sm font-bold text-gray-50 bg-red-600 p-2 rounded-lg"
+    (click)="signout()"
+  >
+    Logout
+  </Button>
+</div>

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "alexproductions-8611d": {
+      "hosting": {
+        "pwa-master-class": [
+          "alexproductions-8611d"
+        ]
+      }
+    }
+  }
+}

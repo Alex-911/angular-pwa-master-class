@@ -1,0 +1,20 @@
+<div
+  class="flex items-center justify-between shadow-lg h-full w-full p-2 rounded-lg bg-gray-200 dark:bg-gray-900 text-gray-900 dark:text-gray-50"
+>
+  <div
+    class="flex items-center justify-start space-x-3 cursor-pointer flex-grow w-full"
+    (click)="updateTodo()"
+  >
+    <div
+      class="h-5 w-5 rounded-full border-2 border-gray-100 shadow-md"
+      [ngClass]="todo.done ? 'bg-green-400' : 'bg-yellow-400'"
+    ></div>
+    <p class="font-semibold text-sm">{{ todo.text }}</p>
+  </div>
+  <button
+    class="bg-red-600 font-bold text-xs text-gray-50 p-2 rounded-md"
+    (click)="deleteTodo()"
+  >
+    Delete
+  </button>
+</div>

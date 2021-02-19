@@ -1,0 +1,22 @@
+<div class="h-full w-full flex items-center justify-center">
+  <div
+    class="flex flex-col items-stretch justify-start shadow-lg rounded-lg p-4 bg-gray-200 dark:bg-gray-800"
+  >
+    <h1 class="flex items-center justify-center my-5 ml-8">
+      <img src="./../../../../../assets/notes.png" alt="" class="w-32" />
+    </h1>
+    <h2 class="text-lg font-bold text-center text-gray-900 dark:text-gray-50">
+      AP Todo App
+    </h2>
+
+    <div class="my-5 p-2 mx-auto">
+      <button
+        class="bg-green-400 p-2 text-xl font-bold rounded-md text-gray-50 shadow-lg"
+        (click)="signInWithGoogle()"
+        [disabled]="authLoading | async"
+      >
+        {{ (authLoading | async) ? "Loading.. " : "Sign in with Google" }}
+      </button>
+    </div>
+  </div>
+</div>
